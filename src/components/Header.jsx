@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { NAV_LINKS, COMPANY_NAME } from "../constants";
-import sloga from "../../public/slogan.png";
+import sloga from "../../public/slogan.jpg";
 
 /**
  * NavItem Component
@@ -23,17 +23,17 @@ export default function Header() {
   const handleLinkClick = () => setOpen(false);
 
   return (
-    <header className="sticky top-4 z-50 rounded-2xl border border-white/10 bg-black/60 px-6 py-4 backdrop-blur-xl">
+    <header className="top-4 z-50 rounded-2xl border border-white/10 bg-black/60 px-6 py-4 backdrop-blur-xl">
       <div className="flex items-center justify-between gap-4">
         
         {/* قسم اللوجو الاحترافي - مدمج مع الصورة */}
-        <div className="flex items-center gap-3 group cursor-pointer w-[339px]">
-          <div className="relative h-10 w-[120px] overflow-hidden rounded-xl bg-gradient-to-tr from-purple-600 to-cyan-400 p-[1px] shadow-[0_0_20px_rgba(168,85,247,0.4)] transition-all duration-500 group-hover:shadow-[0_0_30px_rgba(168,85,247,0.6)]">
-            <div className="flex h-full w-full items-center justify-center rounded-[11px] bg-slate-950 overflow-hidden">
+        <div className="flex items-center gap-3 group cursor-pointer w-[500px]">
+          <div className="relative h-10 w-[180px] overflow-hidden rounded-xl  from-purple-600 to-cyan-400 p-[1px]  transition-all duration-500 group-">
+            <div className=" relative flex h-[51px] w-full items-center justify-center rounded-[11px] bg-slate-950 overflow-hidden">
               <img 
                 src={sloga} 
                 alt="Code Nexus AI Logo" 
-                className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" 
+                className=" h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" 
               />
             </div>
           </div>

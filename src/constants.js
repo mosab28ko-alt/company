@@ -45,13 +45,13 @@ export const TEAM_DISCIPLINES = ["Product", "Design", "Engineering", "Delivery"]
  * Contact information
  */
 export const CONTACT_INFO = {
-  phone: "(555) 312-0412",
+  phone: "+970567440351",
   phoneHref: "tel:5553120412",
-  email: "hello@aurorastudio.com",
+  email: "morantisi88@gmail.com",
   hours: "Mon–Fri · 9:00a–6:00p EST",
 };
 
 /**
  * Company branding
  */
-export const COMPANY_NAME = "Aurora Studio";
+export const COMPANY_NAME = "CODE NEXUS AI";

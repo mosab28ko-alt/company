@@ -8,7 +8,7 @@ import About from "./components/About";
 import Staff from "./components/Staff";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
-
+import Services from "./components/Services";
 export default function App() {
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100">
@@ -20,6 +20,7 @@ export default function App() {
         <main className="flex flex-col gap-14 md:gap-16">
           <Hero />
           <About />
+           <Services />
           <Staff />
           <Contact />
         </main>

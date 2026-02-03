@@ -16,7 +16,7 @@ export default function About() {
           About us
         </p>
         <h2 className="text-2xl font-semibold sm:text-3xl">
-          Purpose built for modern brands
+         We Don't Just Build Apps; We Architect Digital Dominance
         </h2>
         <p className="max-w-3xl text-slate-300">
           We're a multidisciplinary crew of strategists, designers, and
