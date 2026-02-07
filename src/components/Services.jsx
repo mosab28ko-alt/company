@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
-import { BsGearFill } from "react-icons/bs";
-import { RiRobot2Line } from "react-icons/ri";
+import { FaCode } from "react-icons/fa6"
+import { MdOutlineAutoAwesomeMotion } from "react-icons/md";
 import { HiOutlinePaintBrush } from "react-icons/hi2";
 
 
@@ -8,17 +8,35 @@ const SERVICES = [
   {
     title: "Full-Stack Development",
     desc: "End-to-end web solutions built with high-performance logic and scalable architectures.",
-    icon: <BsGearFill /> ,
+    icon: <FaCode /> ,
     color: "from-purple-600 to-blue-600"
   },
   {
-    title: "AI & Smart Logic",
+    title: "UI/UX Design",
     desc: "Integrating intelligent algorithms to automate your business and enhance user experience.",
-    icon: <RiRobot2Line />,
+    icon: <MdOutlineAutoAwesomeMotion />,
     color: "from-cyan-400 to-indigo-500"
   },
   {
+    title: "Database Management",
+    desc: "Captivating visual content and UI/UX designs that speak your brand's language.",
+    icon: <HiOutlinePaintBrush />,
+    color: "from-pink-500 to-purple-600"
+  },
+    {
     title: "Multimedia & Design",
+    desc: "Captivating visual content and UI/UX designs that speak your brand's language.",
+    icon: <HiOutlinePaintBrush />,
+    color: "from-pink-500 to-purple-600"
+  },
+    {
+    title: " DevOps & Maintenance ",
+    desc: "Captivating visual content and UI/UX designs that speak your brand's language.",
+    icon: <HiOutlinePaintBrush />,
+    color: "from-pink-500 to-purple-600"
+  },
+    {
+    title: "API Development & Integration",
     desc: "Captivating visual content and UI/UX designs that speak your brand's language.",
     icon: <HiOutlinePaintBrush />,
     color: "from-pink-500 to-purple-600"

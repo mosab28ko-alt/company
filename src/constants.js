@@ -12,10 +12,10 @@ export const NAV_LINKS = [
  * Company statistics displayed in the hero section
  */
 export const COMPANY_STATS = [
-  { value: "120+", label: "projects delivered" },
-  { value: "98%", label: "client satisfaction" },
-  { value: "14", label: "specialists on staff" },
-  { value: "24/7", label: "global support window" },
+  { value: "Customized Solutions" },
+  { value: "Around-the-Clock Support" },
+  { value: "Skilled Professionals" },
+  { value: "Client-Focused" },
 ];
 
 /**

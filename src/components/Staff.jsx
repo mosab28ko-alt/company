@@ -11,17 +11,19 @@ export default function Staff() {
       className="space-y-8 rounded-3xl border border-white/10 bg-slate-900/60 p-8 shadow-xl"
     >
       {/* Section Header */}
-      <div className="space-y-2">
-        <p className="text-xs font-semibold uppercase tracking-[0.25em] text-cyan-300">
-          The staff
-        </p>
-        <h2 className="text-2xl font-semibold sm:text-3xl">
-          Meet the team behind the work
+      <div className="space-y-2 text-center">
+              <h2 className="text-2xl font-semibold sm:text-3xl">
+          Our Commitment doesn't End with Delivery
         </h2>
-        <p className="max-w-3xl text-slate-300">
-          A flexible bench of specialists means the right people on every
-          project, no bloated overhead.
+          <p className=" text-slate-400 text-xl leading-relaxed  font-medium">
+          We stay by your side with 24/7 support whenever you need us.
         </p>
+
+        <p className="text-xs font-semibold uppercase tracking-[0.25em] text-cyan-300 mt-[3%]">
+          About Us
+        </p>
+  
+
       </div>
 
       {/* Team Disciplines Grid */}

@@ -23,8 +23,8 @@ export default function Header() {
   const handleLinkClick = () => setOpen(false);
 
   return (
-    <header className="top-4 z-50 rounded-2xl border border-white/10 bg-black/60 px-6 py-4 backdrop-blur-xl">
-      <div className="flex items-center justify-between gap-4">
+    <header className="sticky top-4 z-50 rounded-2xl border border-white/10 bg-black/60 px-6 py-4 backdrop-blur-xl">
+      <div className=" flex items-center justify-between gap-4">
         
         {/* قسم اللوجو الاحترافي - مدمج مع الصورة */}
         <div className="flex items-center gap-3 group cursor-pointer w-[500px]">
@@ -38,14 +38,14 @@ export default function Header() {
             </div>
           </div>
           
-          <div className="flex flex-col">
+          {/* <div className="flex flex-col">
             <span className="text-xl font-black italic tracking-tighter text-white uppercase leading-none">
               CODE NEXUS<span className="text-purple-500 ml-0.5">AI</span>
             </span>
             <span className="text-[10px] font-bold tracking-[0.2em] text-cyan-400 uppercase opacity-80">
               Professional Tech Solutions
             </span>
-          </div>
+          </div> */}
         </div>
 
         {/* القائمة الرئيسية (Desktop) */}

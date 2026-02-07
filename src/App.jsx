@@ -19,7 +19,7 @@ export default function App() {
         {/* Main Content Sections */}
         <main className="flex flex-col gap-14 md:gap-16">
           <Hero />
-          <About />
+          {/* <About /> */}
            <Services />
           <Staff />
           <Contact />

@@ -19,25 +19,18 @@ export default function Hero() {
         className="space-y-6"
       >
         <p className="text-xs font-bold uppercase tracking-[0.3em] text-cyan-400">
-          Boutique creative team
+          CODE NEXUS TEAM
         </p>
         
         <h1 className="text-4xl font-extrabold leading-[1.1] text-white sm:text-5xl md:text-6xl">
-          Code built for the <span className="bg-gradient-to-r from-cyan-400 to-indigo-500 bg-clip-text text-transparent">future</span>, driven by professionals
+          We work hand-in-hand with our <span className="bg-gradient-to-r from-cyan-400 to-indigo-500 bg-clip-text text-transparent">clients</span> to turn their vision into reality.
         </h1>
 
-        <p className="text-lg leading-relaxed text-slate-300 md:max-w-[90%]">
-          At <span className="font-bold text-white uppercase tracking-tight">CODE NEXUS AI</span>, 
-          we don’t just write code; we architect success. Our team is a powerhouse of elite professionals, 
-          ranging from Full-Stack visionaries to robust Back-End engineers and Multimedia experts. 
-          We ensure your digital product is nothing short of perfect.
-        </p>
-
         {/* CTA Buttons */}
-        <div className="flex flex-wrap gap-4 pt-4">
+        <div className="flex flex-wrap gap-4 pt-4 ">
           <a
             href="#contact"
-            className="group relative inline-flex items-center gap-2 overflow-hidden rounded-xl bg-gradient-to-r from-cyan-400 to-indigo-500 px-8 py-4 text-sm font-bold text-slate-950 shadow-xl transition-all hover:scale-105 active:scale-95"
+            className="group relative inline-flex items-center gap-2 overflow-hidden rounded-xl bg-gradient-to-r from-cyan-400 to-indigo-500 px-8 py-4 text-sm font-bold text-slate-950 shadow-xl transition-all hover:scale-105 active:scale-95 "
           >
             Schedule a call
           </a>
@@ -51,34 +44,38 @@ export default function Hero() {
       </motion.div>
 
       {/* Right Column - Animated Statistics Grid (The Senior Touch) */}
-      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-        {COMPANY_STATS.map((item, index) => (
-          <motion.div
-            key={item.label}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ 
-              duration: 0.5, 
-              delay: index * 0.2, // ظهور العناصر واحد تلو الآخر
-              ease: "easeOut" 
-            }}
-            whileHover={{ 
-              scale: 1.05, 
-              backgroundColor: "rgba(255, 255, 255, 0.08)",
-              borderColor: "rgba(34, 211, 238, 0.3)" 
-            }}
-            className="flex flex-col gap-1 rounded-2xl border border-white/5 bg-white/5 p-6 shadow-lg backdrop-blur-sm transition-all"
-          >
-            <span className="text-3xl font-black tracking-tight text-white md:text-4xl">
-              {item.value}
-            </span>
-            <span className="text-xs font-bold uppercase tracking-widest text-cyan-500/80">
-              {item.label}
-            </span>
-          </motion.div>
-        ))}
-      </div>
+{/* Right Column - Animated Statistics Grid */}
+<div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+  {COMPANY_STATS.map((item, index) => (
+    <motion.div
+      key={item.label}
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ 
+        duration: 0.5, 
+        delay: index * 0.2, 
+        ease: "easeOut" 
+      }}
+      whileHover={{ 
+        scale: 1.05, 
+        backgroundColor: "rgba(255, 255, 255, 0.08)",
+        borderColor: "rgba(34, 211, 238, 0.3)" 
+      }}
+      className="flex flex-col gap-2 rounded-2xl border border-white/5 bg-white/5 p-6 shadow-lg backdrop-blur-sm transition-all"
+    >
+      {/* النص الكبير صار جرادينت الآن */}
+      <span className="text-2xl font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-indigo-500 md:text-3xl">
+        {item.value}
+      </span>
+      
+      {/* النص الصغير خليته أبيض شفاف شوي عشان يبرز الجرادينت اللي فوقه */}
+      <span className="text-xs font-bold uppercase tracking-widest text-slate-300">
+        {item.label}
+      </span>
+    </motion.div>
+  ))}
+</div>
     </section>
   );
 }
