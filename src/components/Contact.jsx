@@ -2,6 +2,7 @@ import { CONTACT_INFO } from "../constants";
 import { motion } from "framer-motion";
 import { HiPhone, HiEnvelope, HiMapPin, HiChatBubbleLeftRight } from "react-icons/hi2";
 import { FaWhatsapp } from "react-icons/fa";
+import { tr } from "framer-motion/client";
 
 export default function Contact() {
   const CONTACT_DETAILS = [
@@ -14,7 +15,7 @@ export default function Contact() {
       bgColor: "bg-cyan-500/20",
       // رابط الاتصال المباشر
       link: `tel:${CONTACT_INFO.phone}`, 
-      fullWidth: false,
+      fullWidth: true,
     },
     {
       id: "email",
@@ -25,7 +26,7 @@ export default function Contact() {
       bgColor: "bg-purple-500/20",
       // رابط الإيميل المباشر
       link: `mailto:${CONTACT_INFO.email}`,
-      fullWidth: false,
+      fullWidth: tr,
     },
     {
       id: "address",
@@ -34,7 +35,7 @@ export default function Contact() {
       icon: <HiMapPin size={24} />,
       color: "text-slate-300",
       bgColor: "bg-slate-700/50",
-      // رابط خرائط جوجل (يمكنك استبداله برابط موقعك الحقيقي)
+      // رابط خرائط جوجل
       link: "https://maps.google.com/?q=Business+Bay+Tower+Abu+Dhabi",
       fullWidth: true,
     },
@@ -61,7 +62,7 @@ export default function Contact() {
         transition={{ duration: 0.8 }}
         className="max-w-7xl mx-auto rounded-[3.5rem] border border-white/5 bg-slate-900/20 p-8 md:p-16 backdrop-blur-3xl shadow-2xl relative"
       >
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+        <div className="grid items-start grid-cols-1 gap-16 lg:grid-cols-2">
           
           <div className="space-y-12">
             <div className="space-y-6 text-left">
@@ -71,9 +72,9 @@ export default function Contact() {
               </div>
               <h2 className="text-6xl md:text-7xl font-[1000] text-white leading-[0.95] tracking-tighter">
                Let's talk about <br />
-                <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">your project.</span>
+                <span className="text-transparent bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text">your project.</span>
               </h2>
-              <p className="text-slate-400 text-xl leading-relaxed max-w-md font-medium">
+              <p className="max-w-md text-xl font-medium leading-relaxed text-slate-400">
                 We engineer systems that scale and marketing that dominates.
               </p>
             </div>
@@ -84,7 +85,7 @@ export default function Contact() {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              className="grid grid-cols-1 md:grid-cols-2 gap-4 text-left"
+              className="grid grid-cols-1 gap-4 text-left md:grid-cols-2"
             >
               {CONTACT_DETAILS.map((item) => (
                 <motion.a
@@ -119,7 +120,7 @@ export default function Contact() {
 
             <div className="relative space-y-6 text-left">
               <div className="text-cyan-400 text-[10px] font-black uppercase tracking-[0.3em]">Quick Contact</div>
-              <h3 className="text-4xl font-black text-white tracking-tighter">Reach us directly</h3>
+              <h3 className="text-4xl font-black tracking-tighter text-white">Reach us directly</h3>
               
               <div className="flex flex-col gap-4">
                 {/* زر الواتساب */}
@@ -129,11 +130,11 @@ export default function Contact() {
                   href={`https://wa.me/${CONTACT_INFO.phone.replace(/\+/g, '')}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-between rounded-3xl bg-emerald-500 p-6 shadow-lg shadow-emerald-500/20"
+                  className="flex items-center justify-between p-6 shadow-lg rounded-3xl bg-emerald-500 shadow-emerald-500/20"
                 >
                   <div className="flex items-center gap-4 text-slate-950">
                     <FaWhatsapp size={28} />
-                    <span className="font-bold text-lg">WhatsApp Support</span>
+                    <span className="text-lg font-bold">WhatsApp Support</span>
                   </div>
                   <span className="text-xl">→</span>
                 </motion.a>
@@ -143,11 +144,11 @@ export default function Contact() {
                   whileHover={{ scale: 1.02, x: 5 }}
                   whileTap={{ scale: 0.98 }}
                   href={`mailto:${CONTACT_INFO.email}`}
-                  className="flex items-center justify-between rounded-3xl bg-slate-800 border border-white/10 p-6 hover:bg-slate-700 transition-colors"
+                  className="flex items-center justify-between p-6 transition-colors border rounded-3xl bg-slate-800 border-white/10 hover:bg-slate-700"
                 >
                   <div className="flex items-center gap-4 text-white">
                     <HiEnvelope size={28} className="text-cyan-400" />
-                    <span className="font-bold text-lg">Send Email</span>
+                    <span className="text-lg font-bold">Send Email</span>
                   </div>
                   <span className="text-xl text-slate-500">→</span>
                 </motion.a>
