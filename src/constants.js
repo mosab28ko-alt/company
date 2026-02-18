@@ -54,4 +54,4 @@ export const CONTACT_INFO = {
 /**
  * Company branding
  */
-export const COMPANY_NAME = "CODE NEXUS";
+export const COMPANY_NAME = "CODE NEXUS teams";
