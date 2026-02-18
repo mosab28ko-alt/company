@@ -6,38 +6,38 @@ import { HiOutlinePaintBrush } from "react-icons/hi2";
 
 const SERVICES = [
   {
-    title: "Full-Stack Development",
-    desc: "End-to-end web solutions built with high-performance logic and scalable architectures.",
+    title: "Custom Web Application Development",
+    desc: "We specialize in building robust, scalable web applications tailored to your specific business logic.",
     icon: <FaCode /> ,
     color: "from-purple-600 to-blue-600"
   },
   {
     title: "UI/UX Design",
-    desc: "Integrating intelligent algorithms to automate your business and enhance user experience.",
+    desc: "Our design process balances modern aesthetics with intuitive navigation, ensuring your site is as easy to use as it is beautiful to look at.",
     icon: <MdOutlineAutoAwesomeMotion />,
     color: "from-cyan-400 to-indigo-500"
   },
   {
-    title: "Database Management",
-    desc: "Captivating visual content and UI/UX designs that speak your brand's language.",
+    title: "Website Maintenance & Optimization",
+    desc: "We provide ongoing support, security patches, and speed optimizations to keep your site running at peak performance.",
     icon: <HiOutlinePaintBrush />,
     color: "from-pink-500 to-purple-600"
   },
     {
-    title: "Multimedia & Design",
-    desc: "Captivating visual content and UI/UX designs that speak your brand's language.",
+    title: "E-commerce Solutions",
+    desc: "From high-converting landing pages to complex multi-vendor marketplaces, we build storefronts that turn browsers into buyers. We focus on security, lightning-fast load times, and seamless checkout flows.",
     icon: <HiOutlinePaintBrush />,
     color: "from-pink-500 to-purple-600"
   },
     {
     title: " DevOps & Maintenance ",
-    desc: "Captivating visual content and UI/UX designs that speak your brand's language.",
+    desc: "We ensure your application runs smoothly, securely, and efficiently after launch. From automated deployments and server monitoring to regular updates and issue resolution, we keep your system stable, fast, and always online.",
     icon: <HiOutlinePaintBrush />,
     color: "from-pink-500 to-purple-600"
   },
     {
     title: "API Development & Integration",
-    desc: "Captivating visual content and UI/UX designs that speak your brand's language.",
+    desc: "We connect your systems and services through reliable APIs and smart integrations. Our solutions help your applications communicate efficiently, automate workflows, and scale without complexity.",
     icon: <HiOutlinePaintBrush />,
     color: "from-pink-500 to-purple-600"
   }
@@ -55,7 +55,7 @@ export default function Services() {
           whileInView={{ opacity: 1 }}
           className="text-cyan-400 font-bold tracking-[0.3em] uppercase text-xs"
         >
-          Expertise
+          {/* Expertise */}
         </motion.span>
         <h2 className="text-4xl font-black text-white mt-2 uppercase italic tracking-tight">
           Our Tech <span className="text-purple-500">Superpowers</span>

@@ -3,9 +3,9 @@
  */
 export const NAV_LINKS = [
   { label: "Home", href: "#home" },
-  { label: "About Us", href: "#about" },
-  { label: "The Staff", href: "#staff" },
-  { label: "Call Us", href: "#contact" },
+  { label: "Expertiese", href: "#services" },
+  { label: "Our Team", href: "#staff" },
+ { label: "Our Work", href: "/work" },
 ];
 
 /**
@@ -13,9 +13,9 @@ export const NAV_LINKS = [
  */
 export const COMPANY_STATS = [
   { value: "Customized Solutions" },
-  { value: "Around-the-Clock Support" },
+  { value: "Always-On Support" },
   { value: "Skilled Professionals" },
-  { value: "Client-Focused" },
+  { value: "Clientin Focused" },
 ];
 
 /**
@@ -39,7 +39,28 @@ export const BUSINESS_PILLARS = [
 /**
  * Team disciplines
  */
-export const TEAM_DISCIPLINES = ["Product", "Design", "Engineering", "Delivery"];
+export const TEAM_DISCIPLINES = [
+  {
+    badge: "Mohammed Alrantisi",
+    title: "Product Strategy Lead",
+    description: "Seasoned practitioner bridging business goals with technical excellence, mentoring the team to maintain world-class standards and reliable, round-the-clock delivery."
+  },
+  {
+    badge: "Mahmoud Srour",
+    title: "UI/UX Lead",
+    description: "Drives the design vision across all digital products, crafting intuitive, user-centered experiences that turn complex functionality into seamless interaction."
+  },
+  {
+    badge: "Mosab Alkurdi",
+    title: "E-commerce & Frontend Specialist",
+    description: "Architects high-performance interfaces tailored for conversion, ensuring every pixel drives sales and keeps users deeply engaged with your brand."
+  },
+  {
+    badge: "Ahmed Almeqiad",
+    title: "Full-Stack Developer",
+    description: "Engineers the vital link between complex server logic and fluid user interfaces, ensuring a secure, seamless flow of data across the entire ecosystem."
+  }
+];
 
 /**
  * Contact information
@@ -54,4 +75,4 @@ export const CONTACT_INFO = {
 /**
  * Company branding
  */
-export const COMPANY_NAME = "CODE NEXUS AI";
+export const COMPANY_NAME = "CODE NEXUS TEAM";

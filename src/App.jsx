@@ -1,33 +1,30 @@
-﻿/**
- * Main App Component
- * Orchestrates all sections of the website layout
- */
+﻿import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
-import Hero from "./components/Hero";
-import About from "./components/About";
-import Staff from "./components/Staff";
-import Contact from "./components/Contact";
 import Footer from "./components/Footer";
-import Services from "./components/Services";
+import Home from "./pages/Home"; // الصفحة التي أنشأناها فوق
+import WorkPage from "./pages/WorkPage"; // صفحة الأعمال الجديدة
+
 export default function App() {
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-100">
-      <div className="mx-auto flex max-w-7xl flex-col gap-12 px-4 pb-16 pt-6 md:px-6 lg:px-8">
-        {/* Header Navigation */}
-        <Header />
+    <BrowserRouter>
+      <div className="min-h-screen bg-slate-950 text-slate-100">
+        <div className="mx-auto flex max-w-7xl flex-col gap-12 px-4 pb-16 pt-6 md:px-6 lg:px-8">
+          
+          {/* الـ Header يبقى ثابتاً في كل الصفحات */}
+          <Header />
 
-        {/* Main Content Sections */}
-        <main className="flex flex-col gap-14 md:gap-16">
-          <Hero />
-          {/* <About /> */}
-           <Services />
-          <Staff />
-          <Contact />
-        </main>
+          <Routes>
+            {/* المسار الرئيسي يعرض كل السكاشن */}
+            <Route path="/" element={<Home />} />
+            
+            {/* مسار الأعمال يفتح صفحة منفصلة تماماً */}
+            <Route path="/work" element={<WorkPage />} />
+          </Routes>
 
-        {/* Footer */}
-        <Footer />
+          {/* الـ Footer يبقى ثابتاً */}
+          <Footer />
+        </div>
       </div>
-    </div>
+    </BrowserRouter>
   );
 }

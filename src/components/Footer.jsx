@@ -35,7 +35,7 @@ export default function Footer() {
               {COMPANY_NAME}<span className="text-cyan-400">.</span>
             </motion.div>
             <p className="text-slate-400 text-lg leading-relaxed max-w-sm">
-              Empowering businesses with scalable AI and next-generation automation solutions. Leading digital transformation through cutting-edge technology.
+              Driving digital transformation through advanced web development and intelligent engineering solutions. We provide 24/7 expertise, building scalable, secure, and future-ready platforms that power modern businesses.
             </p>
             
             {/* أيقونات السوشيال ميديا مع أنيميشن احترافي */}
@@ -73,7 +73,7 @@ export default function Footer() {
 
           {/* القسم الثالث: التواصل المباشر */}
           <div className="space-y-6">
-            <h4 className="text-white font-bold uppercase tracking-widest text-xs">Get in Touch</h4>
+            <h4 className="text-white font-bold uppercase tracking-widest text-xs">Reach us directly</h4>
             <div className="space-y-4 text-slate-400">
               <p className="hover:text-cyan-400 transition-colors cursor-pointer">{CONTACT_INFO.email}</p>
               <p className="hover:text-cyan-400 transition-colors cursor-pointer">{CONTACT_INFO.phone}</p>

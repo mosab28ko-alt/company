@@ -32,10 +32,10 @@ export default function Hero() {
             href="#contact"
             className="group relative inline-flex items-center gap-2 overflow-hidden rounded-xl bg-gradient-to-r from-cyan-400 to-indigo-500 px-8 py-4 text-sm font-bold text-slate-950 shadow-xl transition-all hover:scale-105 active:scale-95 "
           >
-            Schedule a call
+            Chat with us
           </a>
           <a
-            href="#about"
+            href="#services"
             className="inline-flex items-center gap-2 rounded-xl border border-white/10 px-8 py-4 text-sm font-bold text-slate-100 transition-all hover:bg-white/5 hover:border-white/30"
           >
             Learn more
@@ -47,25 +47,27 @@ export default function Hero() {
 {/* Right Column - Animated Statistics Grid */}
 <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
   {COMPANY_STATS.map((item, index) => (
-    <motion.div
-      key={item.label}
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ 
-        duration: 0.5, 
-        delay: index * 0.2, 
-        ease: "easeOut" 
-      }}
-      whileHover={{ 
-        scale: 1.05, 
-        backgroundColor: "rgba(255, 255, 255, 0.08)",
-        borderColor: "rgba(34, 211, 238, 0.3)" 
-      }}
-      className="flex flex-col gap-2 rounded-2xl border border-white/5 bg-white/5 p-6 shadow-lg backdrop-blur-sm transition-all"
-    >
+<motion.div
+  key={item.label}
+  initial={{ opacity: 0, y: 15 }} 
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true }}
+  transition={{ 
+    type: "spring",      
+    stiffness: 260,      
+    damping: 20,        
+    duration: 0.4,      
+    delay: index * 0.05  
+  }}
+  whileHover={{ 
+    scale: 1.02,         
+    backgroundColor: "rgba(255, 255, 255, 0.08)",
+    borderColor: "rgba(34, 211, 238, 0.3)" 
+  }}
+  className="flex flex-col gap-2 rounded-2xl border border-white/5 bg-white/5 p-6 shadow-lg backdrop-blur-sm transition-all"
+>
       {/* النص الكبير صار جرادينت الآن */}
-      <span className="text-2xl font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-indigo-500 md:text-3xl">
+      <span className="text-2xl font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-indigo-500 md:text-3xl text-center">
         {item.value}
       </span>
       
