@@ -2,6 +2,7 @@ import { CONTACT_INFO } from "../constants";
 import { motion } from "framer-motion";
 import { HiPhone, HiMapPin, HiChatBubbleLeftRight, HiEnvelope } from "react-icons/hi2";
 import { FaWhatsapp } from "react-icons/fa";
+import { tr } from "framer-motion/client";
 
 export default function Contact() {
   // المصفوفة المعدلة: حذفنا الإيميل وجعلنا الهاتف يأخذ العرض الكامل
@@ -63,7 +64,7 @@ export default function Contact() {
         transition={{ duration: 0.6 }}
         className="max-w-7xl mx-auto rounded-[3.5rem] border border-white/5 bg-slate-900/20 p-8 md:p-16 backdrop-blur-3xl shadow-2xl relative"
       >
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+        <div className="grid items-start grid-cols-1 gap-16 lg:grid-cols-2">
           
           {/* Left Side: Text & Contact Cards */}
           <div className="space-y-12">
@@ -83,7 +84,7 @@ export default function Contact() {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              className="grid grid-cols-1 md:grid-cols-2 gap-4 text-left"
+              className="grid grid-cols-1 gap-4 text-left md:grid-cols-2"
             >
               {CONTACT_DETAILS.map((item) => (
                 <motion.a
@@ -131,7 +132,7 @@ export default function Contact() {
                 >
                   <div className="flex items-center gap-4 text-slate-950">
                     <FaWhatsapp size={28} />
-                    <span className="font-bold text-lg">WhatsApp Support</span>
+                    <span className="text-lg font-bold">WhatsApp Support</span>
                   </div>
                   <span className="text-xl group-hover:translate-x-1 transition-transform">→</span>
                 </motion.a>
@@ -144,7 +145,7 @@ export default function Contact() {
                 >
                   <div className="flex items-center gap-4 text-white">
                     <HiEnvelope size={28} className="text-cyan-400" />
-                    <span className="font-bold text-lg">Send Email</span>
+                    <span className="text-lg font-bold">Send Email</span>
                   </div>
                   <span className="text-xl text-slate-500 group-hover:translate-x-1 transition-transform">→</span>
                 </motion.a>
