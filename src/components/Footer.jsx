@@ -22,19 +22,19 @@ export default function Footer() {
       {/* 1. تأثير خلفية متقدم (Glow Effect) */}
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-[300px] bg-gradient-to-t from-cyan-500/10 to-transparent blur-3xl -z-10" />
 
-      <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+      <div className="mx-auto max-w-7xl">
+        <div className="grid grid-cols-1 gap-12 mb-16 md:grid-cols-4">
           
           {/* القسم الأول: البراند والوصف */}
-          <div className="md:col-span-2 space-y-6">
+          <div className="space-y-6 md:col-span-2">
             <motion.div 
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               className="text-3xl font-black tracking-tighter text-white"
             >
-              {COMPANY_NAME}<span className="text-cyan-400">.</span>
+              {COMPANY_NAME}
             </motion.div>
-            <p className="text-slate-400 text-lg leading-relaxed max-w-sm">
+            <p className="max-w-sm text-lg leading-relaxed text-slate-400">
               Driving digital transformation through advanced web development and intelligent engineering solutions. We provide 24/7 expertise, building scalable, secure, and future-ready platforms that power modern businesses.
             </p>
             
@@ -45,7 +45,7 @@ export default function Footer() {
                   key={social.id}
                   href={social.href}
                   whileHover={{ y: -5, scale: 1.1 }}
-                  className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-slate-400 hover:text-cyan-400 hover:border-cyan-400/50 transition-colors"
+                  className="flex items-center justify-center w-10 h-10 transition-colors border rounded-full bg-white/5 border-white/10 text-slate-400 hover:text-cyan-400 hover:border-cyan-400/50"
                 >
                   {social.icon}
                 </motion.a>
@@ -55,13 +55,13 @@ export default function Footer() {
 
           {/* القسم الثاني: روابط سريعة (Map) */}
           <div className="space-y-6">
-            <h4 className="text-white font-bold uppercase tracking-widest text-xs">Navigation</h4>
+            <h4 className="text-xs font-bold tracking-widest text-white uppercase">Navigation</h4>
             <ul className="space-y-4">
               {NAV_LINKS.map((link) => (
                 <li key={link.href}>
                   <a 
                     href={link.href} 
-                    className="text-slate-400 hover:text-white transition-colors flex items-center group"
+                    className="flex items-center transition-colors text-slate-400 hover:text-white group"
                   >
                     <span className="w-0 group-hover:w-4 h-[1px] bg-cyan-400 mr-0 group-hover:mr-2 transition-all opacity-0 group-hover:opacity-100"></span>
                     {link.label}
@@ -73,16 +73,16 @@ export default function Footer() {
 
           {/* القسم الثالث: التواصل المباشر */}
           <div className="space-y-6">
-            <h4 className="text-white font-bold uppercase tracking-widest text-xs">Reach us directly</h4>
+            <h4 className="text-xs font-bold tracking-widest text-white uppercase">Reach us directly</h4>
             <div className="space-y-4 text-slate-400">
-              <p className="hover:text-cyan-400 transition-colors cursor-pointer">{CONTACT_INFO.email}</p>
-              <p className="hover:text-cyan-400 transition-colors cursor-pointer">{CONTACT_INFO.phone}</p>
+              <p className="transition-colors cursor-pointer hover:text-cyan-400">{CONTACT_INFO.email}</p>
+              <p className="transition-colors cursor-pointer hover:text-cyan-400">{CONTACT_INFO.phone}</p>
               <div className="pt-4">
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   onClick={scrollToTop}
-                  className="flex items-center gap-2 text-xs font-black uppercase tracking-tighter bg-white/5 border border-white/10 px-4 py-2 rounded-full text-white hover:bg-white/10"
+                  className="flex items-center gap-2 px-4 py-2 text-xs font-black tracking-tighter text-white uppercase border rounded-full bg-white/5 border-white/10 hover:bg-white/10"
                 >
                   Back to top <FaArrowUp className="text-cyan-400" />
                 </motion.button>
@@ -98,8 +98,8 @@ export default function Footer() {
         <div className="flex flex-col md:row items-center justify-between gap-6 text-[12px] font-medium text-slate-500 uppercase tracking-widest">
           <p>© {currentYear} {COMPANY_NAME}. Built with passion & precision.</p>
           <div className="flex gap-8">
-            <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
+            <a href="#" className="transition-colors hover:text-white">Privacy Policy</a>
+            <a href="#" className="transition-colors hover:text-white">Terms of Service</a>
           </div>
         </div>
       </div>

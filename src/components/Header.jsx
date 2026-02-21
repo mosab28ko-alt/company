@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom"; 
 import { NAV_LINKS } from "../constants";
-import sloga from "../../public/slogan.png";
+import logo from "../../public/logo.png";
 
 const NavItem = ({ href, label, onClick }) => {
   const navigate = useNavigate();
@@ -25,7 +25,7 @@ const NavItem = ({ href, label, onClick }) => {
       <Link
         to="/work"
         onClick={onClick}
-        className="relative rounded-xl px-4 py-2 text-sm font-bold tracking-wide text-slate-300 transition-all duration-300 hover:bg-purple-500/10 hover:text-purple-400 group"
+        className="relative px-4 py-2 text-sm font-bold tracking-wide transition-all duration-300 rounded-xl text-slate-300 hover:bg-purple-500/10 hover:text-purple-400 group"
       >
         {label}
         <span className="absolute bottom-0 left-0 h-[2px] w-0 bg-gradient-to-r from-purple-500 to-cyan-400 transition-all duration-300 group-hover:w-full" />
@@ -37,7 +37,7 @@ const NavItem = ({ href, label, onClick }) => {
     <a
       href={href}
       onClick={handleNavClick}
-      className="relative rounded-xl px-4 py-2 text-sm font-bold tracking-wide text-slate-300 transition-all duration-300 hover:bg-purple-500/10 hover:text-purple-400 group"
+      className="relative px-4 py-2 text-sm font-bold tracking-wide transition-all duration-300 rounded-xl text-slate-300 hover:bg-purple-500/10 hover:text-purple-400 group"
     >
       {label}
       <span className="absolute bottom-0 left-0 h-[2px] w-0 bg-purple-500 transition-all duration-300 group-hover:w-full" />
@@ -50,13 +50,13 @@ export default function Header() {
   const handleLinkClick = () => setOpen(false);
 
   return (
-<header className="sticky top-4 z-50 rounded-2xl border border-white/10 bg-black/60 px-6 py-4 backdrop-blur-xl shadow-2xl">
+<header className="sticky z-50 px-6 py-4 border shadow-2xl top-4 rounded-2xl border-white/10 bg-black/60 backdrop-blur-xl">
   <div className="flex items-center justify-between gap-4">
-    <Link to="/" onClick={handleLinkClick} className="flex items-center gap-3 group cursor-pointer">
+    <Link to="/" onClick={handleLinkClick} className="flex items-center gap-3 cursor-pointer group">
       <div className="relative h-10 w-[160px] overflow-hidden rounded-xl p-[1px] transition-all duration-500 hover:border-purple-500/50">
         <div className="relative flex h-full w-full items-center justify-center rounded-[10px] bg-transparent overflow-hidden">
           <img 
-            src={sloga} 
+            src={logo} 
             alt="Code Nexus AI Logo" 
             className="h-[150px] w-full object-contain transition-transform duration-700 group-hover:scale-110" 
           />
@@ -73,11 +73,11 @@ export default function Header() {
 
           <a href="#contact" onClick={handleLinkClick} className="group relative overflow-hidden rounded-full bg-gradient-to-r from-purple-600 to-indigo-600 px-8 py-2.5 text-xs font-black tracking-widest text-white transition-all hover:scale-105 active:scale-95 uppercase shadow-[0_0_20px_rgba(147,51,234,0.3)]">
             <span className="relative z-10">CHAT WITH US</span>
-            <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent transition-transform duration-500 group-hover:translate-x-full" />
+            <div className="absolute inset-0 transition-transform duration-500 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent group-hover:translate-x-full" />
           </a>
         </nav>
 
-        <button className="flex h-10 w-10 items-center justify-center rounded-xl border border-white/10 text-white md:hidden hover:bg-white/5 transition-colors" onClick={() => setOpen((prev) => !prev)}>
+        <button className="flex items-center justify-center w-10 h-10 text-white transition-colors border rounded-xl border-white/10 md:hidden hover:bg-white/5" onClick={() => setOpen((prev) => !prev)}>
           <div className="space-y-1.5">
             <span className={`block h-0.5 w-6 bg-white transition-all duration-300 ${open ? "rotate-45 translate-y-2" : ""}`} />
             <span className={`block h-0.5 w-6 bg-white transition-all duration-300 ${open ? "opacity-0" : ""}`} />
